@@ -23,6 +23,7 @@ const square_color = document.querySelectorAll("[id = 'square']")
 
 console.log(square_color);
 
+//black paint
 const mono_color = document.querySelector("[id = 'monoColor']");
 console.log(mono_color);
 
@@ -37,8 +38,20 @@ mono_color.onclick = function()
     }
 }
 
+//rainbow paint
+const rgb_color = document.querySelector("[id = 'rgb']");
 
-
+rgb_color.onclick = function()
+{
+    for (let j = 0; j<256; j++)
+    {
+        square_color[j].onmouseover = function()
+        {   
+            square_color[j].style.backgroundColor = random_bg_color();
+        };
+    
+}
+}
 //Clears the board
 const clear_button = document.querySelector("[id = 'clear']");
 clear_button.onclick = function()

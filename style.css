@@ -69,7 +69,7 @@ body{
     width: 125px;
 }
 
-.functions > #clear, #erase, #monoColor
+.functions > #clear, #erase, #monoColor, #rgb
 {
     font-family: 'Karla', sans-serif;
     text-align: center;
@@ -98,6 +98,13 @@ body{
 }
 
 #monoColor:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgb(24, 23, 23);
+    color: #501cfe;
+}
+
+#rgb:hover{
     cursor: pointer;
     transform: scale(1.05);
     background: rgb(24, 23, 23);
