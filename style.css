@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+body{
+    background-color: rgb(24, 23, 23);
+}
+
+#heading-text
+{
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #501cfe
+    ;
+}
+
+.sub-heading > #text
+{
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+
+}
+
+.sub-heading
+{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container
+{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.board
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px; 
+    padding: 22px;
+    background-color: #202020;
+    border-radius: 3px;
+}
+
+.board > #square
+{
+    width: calc(100% / 16);
+    height: 25px; /* Adjust the height as needed */
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.functions
+{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* margin: 10px; */
+    align-items: center;
+    padding: 22px;
+    background-color: #202020;
+    border-radius: 10px;
+    width: 125px;
+}
+
+.functions > #clear, #erase, #monoColor
+{
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    color: #501cfe;
+    background-color: rgb(24, 23, 23);
+    height: 50px;
+    width: 120px;
+    border: 0px solid;
+    border-radius: 10px;
+}
+
+#clear:hover {
+        cursor: pointer;
+      transform: scale(1.05);
+      background: rgb(24, 23, 23);
+      color: #501cfe;
+  }
+
+#erase:hover {
+    cursor: pointer;
+  transform: scale(1.05);
+  background: rgb(24, 23, 23);
+  color: #501cfe;
+}
+
+#monoColor:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgb(24, 23, 23);
+    color: #501cfe;
+}
