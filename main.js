@@ -1,5 +1,7 @@
 const container = document.querySelector("#main-container");
 const board = document.querySelector("#main-container .board");
+// const create = document.querySelector("[id = 'create']");
+
 
 for(let i = 0; i<256; i++){
 
@@ -27,13 +29,28 @@ console.log(square_color);
 const mono_color = document.querySelector("[id = 'monoColor']");
 console.log(mono_color);
 
+const picker = document.createElement("input");
+picker.setAttribute("type", "color");
+picker.style.margin = "10px";
+// picker.style.borderRadius = "50%";
+picker.style.border = "none";
+picker.style.width = "120px";
+picker.style.height = "50px";
+picker.style.padding = "0px";
+picker.style.backgroundColor = "#202020"
+picker.style.cursor =" pointer";
+picker.style.outline = "none";
+picker.setAttribute("value", "#501cfe");
+const func = document.querySelector("[class = 'functions']");
+func.insertBefore(picker, mono_color);
+
 mono_color.onclick = function()
-{
+{   
     for (let j = 0; j<256; j++)
     {
         square_color[j].onmouseover = function()
         {   
-            square_color[j].style.backgroundColor = "black";
+            square_color[j].style.backgroundColor = picker.value;
         };
     }
 }
@@ -48,9 +65,8 @@ rgb_color.onclick = function()
         square_color[j].onmouseover = function()
         {   
             square_color[j].style.backgroundColor = random_bg_color();
-        };
-    
-}
+        };   
+    }
 }
 //Clears the board
 const clear_button = document.querySelector("[id = 'clear']");
@@ -75,6 +91,10 @@ for (let j = 0; j<256; j++)
     } ;
 }
 }
+
+
+
+
 
 
 

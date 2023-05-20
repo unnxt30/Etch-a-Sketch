@@ -35,9 +35,24 @@ body{
     margin-top: 75px;
     display: flex;
     justify-content: space-around;
+    /* align-items: center; */
 }
 
-.board
+.board {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 500px;
+    height: 500px;
+  }
+
+#square
+{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* .board
 {
     display: flex;
     flex-wrap: wrap;
@@ -50,17 +65,17 @@ body{
 .board > #square
 {
     width: calc(100% / 16);
-    height: 25px; /* Adjust the height as needed */
-    border: 1px solid #000;
-    box-sizing: border-box;
-    background-color: white;
-}
+    height: calc(100% / 16); /* Adjust the height as needed */
+    /* border: 1px solid #000; */
+    /* box-sizing: border-box; */
+    /* background-color: white; */
+/* } */ 
 
 .functions
 {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     /* margin: 10px; */
     align-items: center;
     padding: 22px;
@@ -69,7 +84,7 @@ body{
     width: 125px;
 }
 
-.functions > #clear, #erase, #monoColor, #rgb
+.functions > #clear, #erase, #monoColor, #rgb, #create
 {
     font-family: 'Karla', sans-serif;
     text-align: center;
@@ -109,4 +124,12 @@ body{
     transform: scale(1.05);
     background: rgb(24, 23, 23);
     color: #501cfe;
+}
+
+#create:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgb(24, 23, 23);
+    color: #501cfe;
+
 }
